@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmville</title>
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="../js/controller.mjs" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <form class="search-form__slidedown" autocomplete="off">
+                <div class="search-function__container__slidedown">
+                    <label for="search-input__slidedown"></label>
+                    <input id="search-input" type="text" name="search-input__slidedown" placeholder="Search Filmville" place size="5" />
+                    <button class="search-btn__absolute__slidedown">
+                        <img src="../img/search.svg" alt="" class="search-btn__icon__slidedown">
+                    </button>
+                </div>
+            </form>
+            <nav class="nav-flex">
+                <h1 class="title">Filmville</h1>
+                <div class="nav-right">
+                    <form class="search-form" autocomplete="off">
+                        <div class="search-function__container">
+                            <label for="search-input"></label>
+                            <input id="search-input" type="text" name="search-input" placeholder="Search Filmville" place size="5" />
+                            <button class="search-btn__absolute">
+                                <img src="../img/search.svg" alt="" class="search-btn__icon">
+                            </button>
+                        </div>
+                        <div class="watchlist">
+                            <p class="watchlist-text">Watchlist</p>
+                            <button class="see-watchlist-btn">
+                                <img src="../img/noun-bookmark-1376552-FFFFFF.svg" alt="" class="watchlist-btn__icon">
+                            </button>
+                            <div class="watchlist-preview__container hidden"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="nav-right__alt">
+                    <button class="search-btn">
+                        <img src="../img/search.svg" alt="" class="search-btn__icon">
+                    </button>
+                    <button class="see-watchlist-btn">
+                        <img src="../img/noun-bookmark-1376552-FFFFFF.svg" alt="" class="watchlist-btn__icon">
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="spinner-container hidden">
+                <!-- <img src="../img/apple.svg" alt="" class="spinner"> -->
+                <img src="../img/spinner.svg" alt="" class="spinner">
+            </div>
+            <section class="main-content">
+                <div class="intro-content">
+                    <section class="slider-wrapper">
+                        <ul class="slides-container" id="slides-container">
+                          <li class="slide">
+                             <img src="https://hips.hearstapps.com/hmg-prod/images/shutterstock-editorial-5885982k-huge-1531925325.jpg " alt="">
+                          </li>
+                          <li class="slide">
+                            <img src="https://hips.hearstapps.com/hmg-prod/images/actors-tony-sirico-steven-van-zandt-james-gandolfini-news-photo-1679931284.jpg" alt="">
+                          </li>
+                          <li class="slide">
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ab450d75-bebe-47e1-8a1d-ccd59b837304/ddrx9a7-61b956a4-069b-4489-9605-f7db871c1bbb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiNDUwZDc1LWJlYmUtNDdlMS04YTFkLWNjZDU5YjgzNzMwNFwvZGRyeDlhNy02MWI5NTZhNC0wNjliLTQ0ODktOTYwNS1mN2RiODcxYzFiYmIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cC6ycS5a5d2alrPLTlh5o5ew9Mx0SA9lQKyCe5hy3dA" alt="">
+                          </li>
+                          <li class="slide">
+                            <img src="https://walker-web.imgix.net/cms/14121600.jpg?auto=format,compress&w=1920&h=1200&fit=crop&dpr=1.5" alt="">
+                          </li>
+                          <li class="slide">
+                            <img src="https://deseret.brightspotcdn.com/dims4/default/b51ad32/2147483647/strip/true/crop/1104x630+48+0/resize/1461x834!/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FeoSjWcC0rBr5zt9j5IlOd-agF1M%3D%2F0x0%3A1200x630%2F1200x630%2Ffilters%3Afocal%28600x315%3A601x316%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F18980546%2F299d871144.jpg" alt="">
+                          </li>
+                        </ul>
+                        <button class="slide-arrow" id="slide-arrow-prev">
+                            <img src="../img/arrow-left.svg" alt="">
+                        </button>
+                        <button class="slide-arrow" id="slide-arrow-next">
+                            <img src="../img/arrow-right.svg" alt="">
+                        </button>
+                    </section>
+                    <div class="slides-nav">
+                        <div class="nav-indicator" data-index="0"></div>
+                        <div class="nav-indicator" data-index="1"></div>
+                        <div class="nav-indicator" data-index="2"></div>
+                        <div class="nav-indicator" data-index="3"></div>
+                        <div class="nav-indicator" data-index="4"></div>
+                    </div>
+                    
+                    <p class="carousel-info">
+                        Filmville is a website which gives you the opportunity to search for your favorite
+                        movies and TV series streaming availablilites. Maybe not even your favorites, but perhaps
+                        something you've been interested in watching for the first time. Select what program type
+                        you would like to search for (button left of search bar) and search for title. Streaming
+                        availablitity will be revealed when hovering over results. If you wish to know more about 
+                        that particular program, there is available information regarding cast, runtime, rating, 
+                        reviews, etc.
+                    </p>
+                    
+                    <div class="greeting-hero">
+                        <div class="greeting-text">
+                            <h2 class="hero-title title">welcome to filmville</h2>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-content hidden"></div>
+                
+                <div class="result-details hidden">
+                    <!-- <div class="result-details-container">
+                        <h3 class="details-title title">Star Wars</h3>
+                        <div class="details-title-info">
+                           <p class="title-year">1977</p>
+                           <span class="middot">&middot;</span>
+                           <p class="title-rating">PG-13</p>
+                           <span class="middot">&middot;</span>
+                           <p class="title-length">2h 1m</p>
+                        </div>
+                        <img src="https://image.tmdb.org/t/p/w1280/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg" alt="" class="detail-preview"> 
+                        <div class="further-details">
+                            <div class="sub-photo__info">
+                                <div class="genres">
+                                    <p class="genre">Action</p>
+                                    <p class="genre">Adventure</p>
+                                    <p class="genre">Fantasy</p>
+                                </div>
+                                <div class="imdb-rating__container">
+                                    <p class="rating-label">imd<span class="lowercase">b</span> rating</p>
+                                    <div class="rating">
+                                        <img src="../img/star.svg" alt="" class="rating-star">
+                                        <p class="rating-text"><span class="emphasized">8.6</span>/10</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="summary">
+                                Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.
+                            </p>
+                            <div class="director-writer-stars">
+                               <div class="director-info__container">
+                                   <p class="director">Director</p>
+                                   <span class="director-writer-stars__span">George Lucas</span>
+                               </div>
+                               <div class="writer-info__container">
+                                   <p class="writer">Writer</p>
+                                   <span class="director-writer-stars__span">George Lucas</span>
+                               </div>
+                               <div class="stars-info__container">
+                                   <p class="stars">Stars</p>
+                                   <span class="director-writer-stars__span">Mark Hamill <span class="divider">&#8901;</span> Harrison Ford <span class="divider">&#8901;</span> Carrie Fisher</span>
+                               </div>
+                            </div>
+                            <div class="trailer__section">
+                                <h4 class="trailer__header">Trailer</h4>
+                                <iframe class="trailer" src="https://www.youtube.com/embed/XsS1yE2f-hE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="streaming-options__section">
+                                <p class="streaming-options__header">Streaming Options</p>
+                                <div class="streaming-options__container">
+                                    <a class="details-page__option" href="https://www.disneyplus.com/movies/star-wars-a-new-hope-episode-iv/12fVeZxD2fWJ">
+                                        <svg class="streaming-icon streaming-icon__details disney">
+                                           <use href="http://localhost:1234/icons.c78699a6.svg?1691372635327#disney"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="details-page__option" href="https://www.amazon.com/gp/video/detail/B081B7GHWK/ref=atv_dp?language=en">
+                                        <svg class="streaming-icon streaming-icon__details prime">
+                                           <use href="http://localhost:1234/icons.c78699a6.svg?1691372827752#prime"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div> 
+            </section>
+        </main>
+        <footer>
+            <h1 class="title">filmville</h1>
+            <span class="copyright">&copyCopyright by Hayden Jenkins</span>
+        </footer>
+    </div>
+      
+</body>
+</html>
+
+
+
+<!-- https://hips.hearstapps.com/hmg-prod/images/shutterstock-editorial-5885982k-huge-1531925325.jpg 
+     https://hips.hearstapps.com/hmg-prod/images/actors-tony-sirico-steven-van-zandt-james-gandolfini-news-photo-1679931284.jpg
+     https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ab450d75-bebe-47e1-8a1d-ccd59b837304/ddrx9a7-61b956a4-069b-4489-9605-f7db871c1bbb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiNDUwZDc1LWJlYmUtNDdlMS04YTFkLWNjZDU5YjgzNzMwNFwvZGRyeDlhNy02MWI5NTZhNC0wNjliLTQ0ODktOTYwNS1mN2RiODcxYzFiYmIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.cC6ycS5a5d2alrPLTlh5o5ew9Mx0SA9lQKyCe5hy3dA
+     https://walker-web.imgix.net/cms/14121600.jpg?auto=format,compress&w=1920&h=1200&fit=crop&dpr=1.5
+     https://deseret.brightspotcdn.com/dims4/default/b51ad32/2147483647/strip/true/crop/1104x630+48+0/resize/1461x834!/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FeoSjWcC0rBr5zt9j5IlOd-agF1M%3D%2F0x0%3A1200x630%2F1200x630%2Ffilters%3Afocal%28600x315%3A601x316%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F18980546%2F299d871144.jpg-->
+
+

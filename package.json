@@ -1,0 +1,18 @@
+{
+  "name": "project-folder",
+  "version": "1.0.0",
+  "description": "filmville",
+  "main": "js/controller.mjs",
+  "scripts": {
+    "start": "parcel filmville-pages/index.html"
+  },
+  "author": "Hayden",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "core-js": "^3.32.0",
+    "regenerator-runtime": "^0.14.0"
+  }
+}
